@@ -141,7 +141,13 @@
     margin-top: 10px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background: var(--iris);
-    cursor: pointe;
+    cursor: pointer;
+}
+.button:hover {
+    color: rgb(185, 6, 6);
+}
+.button:active {
+   transform: translateY(2px);
 }
 .section1 {
     width: 1128px;
@@ -237,14 +243,15 @@
     height: 16px;
     justify-content: center;
 }
-.icons-list .icon:hoover {
-    color: var(--ocean);
+.icons-list a.icon {
+    transition: transform 0.3s, color 0.3s;
 }
-.icons-list .icon:focus,
-.icons-list .icon:active {
-    transition: 0.3s;
-    color: #08a57e;
+.icons-list a.icon:hover {
+    transform: scale(1.2);   
 }
+.icons-list a.icon:active {
+    transform: scale(0.8);
+} 
 .section4 {
     width: 1128px;
     padding-top: 94px;
@@ -339,56 +346,108 @@
     }
     .button-list button {
         cursor: pointer;
-        transition: box-shadow 0.3s;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+    .button {
+        background-color: rgb(8, 48, 102);
+        transform: scale(1.1);
+    }
+    .button {
+        transform:scale(0.9);
     }
     .list-filters button:hover {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
     .button-All {
+        transition: transform 0.3, background-color 0.3s;
         border-radius: 4px;
         padding: 12px 24px;
         width: 69px;
         height: 48px;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0);
         background: var(--ocean);
         color: #f4f4fd;
     }
+        .button-All:hover {
+            background-color: var(--ocean);
+            transform: scale(1.1);
+        }   
+        .button-All:active {
+            transform: scale(0.9);
+        }
+    
         .button-Web {
+            transition: transform 0.3, background-color 0.3s;
             border: 1px solid var(--cornflower);
             border-radius: 4px;
             padding: 12px 24px;
             width: 116px;
             height: 48px;
-            background: var(--cloud);
-            color: #404bbf;
+            background: var(--ocean);
+            color: #f4f4fd;
+        }
+        .button-Web:hover {
+            background-color: var(--ocean);
+            transform: scale(1.1);
+        }
+        .button-Web:active {
+            transform: scale(0.9);
         }
         .button-App {
+            transition: transform 0.3, background-color 0.3s;
             border: 1px solid var(--cornflower);
             border-radius: 4px;
             padding: 12px 24px;
             width: 78px;
             height: 48px;
-            background: var(--cloud);
-            color: #404bbf;
+            background: var(--ocean);
+            color: #f4f4fd;
+        }
+        .button-App:hover {
+            background-color: var(--ocean);
+            transform: scale(1.1);
+        }
+        .button-App:active {
+            transform: scale(0.9);
         }
         .button-Design {
+            transition: transform 0.3, background-color 0.3s;
             border: 1px solid var(--cornflower);
             border-radius: 4px;
             padding: 12px 24px;
             width: 101px;
             height: 48px;
-            background: var(--cloud);
-            color: #404bbf;
+            background: var(--ocean);
+            color: #f4f4fd;
+        }
+        .button-Design:hover {
+            background-color: var(--ocean);
+            transform: scale(1.1);
+        }
+        .button-Design:active {
+            transform: scale(0.9);
         }
         .button-Marketing {
+            transition: transform 0.3, background-color 0.3s;
             border: 1px solid var(--cornflower);
             border-radius: 4px;
             padding: 12px 24px;
             width: 126px;
             height: 48px;
-            background: var(--cloud);
-            color :#404bbf;
+            background: var(--ocean);
+            color :#f4f4fd;
         }
+        .button-Marketing:hover {
+            background-color: var(--ocean);
+            transform: scale(1.1);
+        } 
+        .button-Marketing:active {
+            transform: scale(0.9);
+        }
+
+
+
+
+
         .raw1 {
             display: flex;
             justify-content: space-around;
