@@ -101,8 +101,8 @@
     text-decoration: none;
 }
 .hero {
-    width: 1128px;
-    height: 412px;
+    width: 1440px;
+    height: 600px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -120,6 +120,7 @@
     justify-content: center;
     color: #fff;
     padding-top: 94px;
+    position: relative;
 }
 .main.hero.h1.content {
     font-family: var(--font-family);
@@ -146,15 +147,14 @@
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background: var(--iris);
     cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 .button-service-btn:hover {
     color: rgb(185, 6, 6);
 }
 .button-service-btn:active {
    transform: translateY(2px);
-}
-.is-hidden {
-    visibility: hidden;
 }
 .modal {
     position: fixed;
@@ -175,6 +175,11 @@
     position: relative;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
     background: var(--dairy);
+}
+.modal-body {
+    width: 1440px;
+    height: 770px;
+    background: var(--white);
 }
 
 .close-btn {
@@ -480,11 +485,6 @@
         .button-Marketing:active {
             transform: scale(0.9);
         }
-
-
-
-
-
         .raw1 {
             display: flex;
             justify-content: space-around;
@@ -514,3 +514,5 @@
         .card:hover {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
+      
+      
