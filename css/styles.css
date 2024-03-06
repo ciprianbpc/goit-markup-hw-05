@@ -157,6 +157,7 @@
    transform: translateY(2px);
 }
 .modal {
+    background-color: #741c28;
     position: fixed;
     top: 0;
     left: 0;
@@ -167,6 +168,7 @@
     align-items: center;
 }
 .modal-content {
+    
     margin: 0 auto;
     padding: 16px;
     background-color: #fff;
@@ -193,7 +195,6 @@
 }
 .section1 {
     width: 1128px;
-
     display: flex;
     justify-content: space-between;
     padding-top: 94px;
