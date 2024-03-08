@@ -9,6 +9,6 @@
   refs.closeModalBtn.addEventListener("click", toggleModal);
 
   function toggleModal() {
-    refs.modal.classList.toggle("modal-content");
+    refs.modal.classList.toggle("modal");
   }
 })();
