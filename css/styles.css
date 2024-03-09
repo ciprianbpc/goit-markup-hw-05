@@ -64,8 +64,7 @@
 .nav.nav-menu {
     width: 261px;
     height: 48px;
-}
-    
+}    
 .nav-menu ul {
     width: 261px;
     height: 48px;
@@ -79,33 +78,42 @@
     letter-spacing: 0.02em;
     color: var(--navy-blue);
     padding: 0;
+    margin:0;
 }
 .nav-menu ul li {
     width: 261px;
     height: 48px;
-   
     display: inline;
 }
-.nav-menu ul li active-studio {
+.nav-menu ul li .studio {
     width: 48px;
     height: 48px;
 }
-.nav-menu ul li active-portofoliu {
+.nav-menu ul li .portofoliu {
     width: 66px;
     height: 52px;  
 }
-.nav-menu ul li active-contacts {
+.nav-menu ul li .contacts {
     width: 67px;
     height: 52px;
 }
-
-
 .nav-menu ul li a {
-    width: 48px;
-     height: 48px;
     text-decoration: none;
     color: black;
 }
+
+
+
+
+
+
+.nav-menu ul li a:hover {
+    border-radius: 2px;
+    width: 48px;
+    height: 4px;
+    background: var(--ocean);
+}
+
 .info {
     font-family: var(--font-family);
     font-weight: 400;
@@ -182,19 +190,15 @@
 }
 .is-hidden {  
     visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    position: fixed;
-    transform: scale(1.1);
 }
-.modal {
-    opacity: 0.8;
+.popover {
     z-index: 1;
+    opacity: 0.8;
     position: fixed;
     top: 0;
     left: 0;
     width: 1440px;
-    height: 770px;
+    height: 756px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,7 +206,7 @@
     transition: transform 0.3s;
 
 }
-.modal-content {
+.modal {
     z-index: 2;
     margin: 0 auto;
     padding: 16px;
@@ -211,17 +215,30 @@
     height: 584px;
     position: relative;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
-    background: var(--dairy);
+    background-color: var(--dairy);
     
 }
 .close-btn {
-    background-color: red;
-    border-radius: 50%;
-    color: #fff;
-    outline: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    fill: var(--cornflower);
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 24px;
     right: 24px; 
+    justify-content: center;
+}
+.close-btn svg { 
+    height: 24px; 
+    width: 24px;
+    fill: var(--navy-blue);
+}
+.close-btn:hover {
+    cursor: pointer;
+    color: fff;
+    transition: transform 250ms cubic-bezier(.04, 0, .02, 1);
 }
 .section1 {
     width: 1128px;
@@ -317,12 +334,14 @@
     justify-content: center;
 }
 .icons-list a.icon {
-    transition: transform 0.3s, color 0.3s;
+    transition: transform 0.3s, color 0.3s; 
 }
 .icons-list a.icon:hover {
+    background:var(--green);
     transform: scale(1.2);   
 }
 .icons-list a.icon:active {
+    background: var(--ocean);
     transform: scale(0.8);
 } 
 .section4 {
@@ -362,28 +381,35 @@
     height: 56px;
 }
 .footer {
+    display: flex;
     width: 1440px;
     height: 312px;
     background: var(--navy-blue);
     color: #fff;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-top: 94px;
     padding-bottom: 94px;
 }
-.footer {
-    padding-top: 100px;
-    padding-left: 156px;
+.footer-text {
+    width: 264px;
+    height: 112px;   
 }
 .footer .icons-list {
     display: flex;
 }
-.social {
+.social {  
+    width: 208px;
+    height: 80px;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
     color: var(--white);
+}
+.e-mail-input {
+    width: 453px;
+    height: 80px;
 }
 .hr {
     border-bottom: 1px solid var(--cornflower);
