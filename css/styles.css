@@ -60,60 +60,54 @@
     align-items: center;
     list-style-type: none;
     text-decoration: none;
-}
-.nav.nav-menu {
-    width: 261px;
-    height: 48px;
-}    
-.nav-menu ul {
-    width: 261px;
-    height: 48px;
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+} 
+.nav-menu {
+    display: inline-block;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
     color: var(--navy-blue);
+}
+.nav-menu ul {
+    list-style-type: none;
     padding: 0;
-    margin:0;
 }
-.nav-menu ul li {
-    width: 261px;
-    height: 48px;
-    display: inline;
+.nav-menu li {
+    display: inline-block;
+    margin-right: 20px;
 }
-.nav-menu ul li .studio {
-    width: 48px;
-    height: 48px;
-}
-.nav-menu ul li .portofoliu {
-    width: 66px;
-    height: 52px;  
-}
-.nav-menu ul li .contacts {
-    width: 67px;
-    height: 52px;
-}
-.nav-menu ul li a {
+.nav-menu a {
+    position: relative;
     text-decoration: none;
-    color: black;
+    color: #333;
 }
-
-
-
-
-
-
-.nav-menu ul li a:hover {
-    border-radius: 2px;
-    width: 48px;
+.nav-menu a::after {
+    content: '';
+    display: block;
+    width: 0;
     height: 4px;
-    background: var(--ocean);
+    background-color: #007bff;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    transition:transform 250ms cubic-bezier(.04, 0, .02, 1);;
 }
-
+.nav-menu a:hover::after,
+.nav-menu a:focus::after {
+    width: 100%;
+}
+.nav-menu a.active::after {
+    width: 100%;
+}
+.nav-menu a.active {   
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--ocean);
+}   
 .info {
     font-family: var(--font-family);
     font-weight: 400;
