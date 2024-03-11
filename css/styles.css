@@ -20,21 +20,20 @@
 * {
     box-sizing: border-box;
 }
-.wrapp {
-    width: 1440px;
-    height: 3200px;
-}
+
 .body {
     font-family: 'Roboto400', 'Roboto500', 'Roboto700', 'Roboto900', 'Raleway700', sans-serif;
 }
 .container {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
-    height: 3400px;
-    
-
-}.text-logo {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1440px;
+    height: 3200px; 
+}
+.text-logo {
     font-family: var(--second-family);
     font-weight: 800;
     font-size: 18px;
@@ -51,10 +50,11 @@
     content: Web;
     color: blue;
 }
-.container-global-header {
+.container-header {
+    width: 1440px;
+    height: 72px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
@@ -206,7 +206,7 @@
     padding: 16px;
     border-radius: 4px;
     width: 408px;
-    height: 584px;
+    height: 672px;
     position: relative;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
     background-color: var(--dairy);
@@ -269,9 +269,12 @@
 }
 .section2 {
     width: 1128px;
-    padding-top: 94px;
+    height: 412px;
     padding-bottom: 94px;
     text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0
 }
 .h2 {
     font-family: var(--font-family);
@@ -284,13 +287,13 @@
     color: var(--navy-blue);
 }
 
-.pictures {
+.rectangle {
     display: flex;
     justify-content: space-around;
 }
 .section-team {
     width: 1440px;
-    height: 790px;
+    height: 780px;
     text-align: center;
     background: var(--cloud);
     padding-top: 94px;
@@ -340,10 +343,11 @@
 } 
 .section4 {
     width: 1128px;
+    height: 200px; 
     padding-top: 94px;
-    padding-bottom: 94px;  
+    padding-bottom: 94px;
 }
-.h2 {
+.customers {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 36px;
@@ -364,8 +368,6 @@
     height: 88px;
     border: 1px solid var(--light-slate);
     border-radius: 4px;
-    width: 168px;
-    height: 88px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -380,9 +382,12 @@
     height: 312px;
     background: var(--navy-blue);
     color: #fff;
-    justify-content: space-evenly;
+    justify-content: space-evenly; 
+    align-items: center;
     padding-top: 94px;
     padding-bottom: 94px;
+    margin: 200px 0px 0px 0px;
+   
 }
 .footer-text {
     width: 264px;
@@ -391,19 +396,29 @@
 .footer .icons-list {
     display: flex;
 }
-.social {  
-    width: 208px;
-    height: 80px;
+.social-media {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
     color: var(--white);
+    margin-top: 0;
+}
+.social {
+    align-items: center;  
+    width: 208px;
+    height: 80px;
 }
 .e-mail-input {
     width: 453px;
     height: 80px;
+}
+
+.wrap-portofolio {
+    background: var(--white);
+    width: 1440px;
+    height: 2080px;
 }
 .hr {
     border-bottom: 1px solid var(--cornflower);
@@ -442,7 +457,7 @@
         transition: transform 0.3s, background-color 0.3s;
     }
     .button {
-        background-color: rgb(8, 48, 102);
+        background-color: var(--cloud);;
         transform: scale(1.1);
     }
     .button {
@@ -452,109 +467,115 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
     .button-All {
-        transition: transform 0.3, background-color 0.3s;
+        
+        border: 1px solid var(--cornflower);
         border-radius: 4px;
         padding: 12px 24px;
         width: 69px;
         height: 48px;
-        background: var(--ocean);
-        color: #f4f4fd;
+        background: var(--cloud);
+        
     }
         .button-All:hover {
             background-color: var(--ocean);
             transform: scale(1.1);
+            color: #fff;
+            transition: transform 250ms cubic-bezier(.04, 0, .02, 1);
         }   
         .button-All:active {
             transform: scale(0.9);
         }
     
         .button-Web {
-            transition: transform 0.3, background-color 0.3s;
+           
             border: 1px solid var(--cornflower);
             border-radius: 4px;
             padding: 12px 24px;
             width: 116px;
             height: 48px;
-            background: var(--ocean);
-            color: #f4f4fd;
+            background: var(--cloud);
+    
         }
         .button-Web:hover {
             background-color: var(--ocean);
             transform: scale(1.1);
+            color: #fff;
+            transition: transform 250ms cubic-bezier(.04, 0, .02, 1);
         }
         .button-Web:active {
             transform: scale(0.9);
         }
         .button-App {
-            transition: transform 0.3, background-color 0.3s;
+            
             border: 1px solid var(--cornflower);
             border-radius: 4px;
             padding: 12px 24px;
             width: 78px;
             height: 48px;
-            background: var(--ocean);
-            color: #f4f4fd;
+            background: var(--cloud);
+            
         }
         .button-App:hover {
             background-color: var(--ocean);
             transform: scale(1.1);
+            color: #fff;
+            transition: transform 250ms cubic-bezier(.04, 0, .02, 1);
         }
         .button-App:active {
             transform: scale(0.9);
         }
         .button-Design {
-            transition: transform 0.3, background-color 0.3s;
+            
             border: 1px solid var(--cornflower);
             border-radius: 4px;
             padding: 12px 24px;
             width: 101px;
             height: 48px;
-            background: var(--ocean);
-            color: #f4f4fd;
+            background: var(--cloud);   
         }
         .button-Design:hover {
             background-color: var(--ocean);
             transform: scale(1.1);
+            color: #fff;
+            transition: transform 250ms cubic-bezier(.04, 0, .02, 1);
         }
         .button-Design:active {
             transform: scale(0.9);
         }
         .button-Marketing {
-            transition: transform 0.3, background-color 0.3s;
+            
             border: 1px solid var(--cornflower);
             border-radius: 4px;
             padding: 12px 24px;
             width: 126px;
             height: 48px;
-            background: var(--ocean);
-            color :#f4f4fd;
+            background: var(--cloud);
         }
         .button-Marketing:hover {
             background-color: var(--ocean);
             transform: scale(1.1);
+            color: #fff;
+            transition: transform 250ms cubic-bezier(.04, 0, .02, 1);
         } 
         .button-Marketing:active {
             transform: scale(0.9);
         }
-        .raw1 {
+        .raw {
+            display: flex;
+            width: 1128px;
+            height: 428px;
             display: flex;
             justify-content: space-around;
             padding-top: 94px;
             padding-bottom: 94px;
         }
-        .raw2 {
-            padding-bottom: 94px;
-            display: flex;
-            justify-content: space-around;
-            padding-top: 94px;
-        }
-        .raw3 {
-            display: flex;
-            justify-content: space-around;
-            padding-top: 94px;
-            padding-bottom: 94px;
-        }
-        .card {
+        
+        .content-card {
+            padding: 0px 16px;
+            width: 360px;
+            height: 56px;
+        } 
+        .project-card {
         position: relative;    
         border: 1px solid var(--cloud);
         width: 360px;
@@ -564,10 +585,10 @@
         transition: box-shadow 0.3s;
         overflow: hidden;
         }
-        .card:hover {
+        .project-card:hover {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
-        .card:hover .overlay {
+        .project-card:hover .overlay {
             transform: translateY(0);
         }
         .overlay {
@@ -591,4 +612,8 @@
             transform: translateY(100%);
             transition: transform cubic-bezier(.04, 0, .02, 1);
         }
+        
+         
+         
+        
     
