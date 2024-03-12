@@ -17,7 +17,9 @@
     --font-family: "Roboto", sans-serif;
     --second-family: "Raleway", sans-serif;
 }
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -301,7 +303,7 @@
 }
 .cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .card {
     border-radius: 0 0 4px 4px;
@@ -426,23 +428,18 @@
     height: 72px;
     background: var(--white);
     }
-    .buttons-section {
+    
+    .filters {
         width: 586px;
         height: 48px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        padding-top: 68px;
-        padding-left: 627px;
-    }
-    .filters {
         text-align: center;
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
     .button-list {
+        padding-top: 94px;
+        padding-bottom: 94px;
         display: flex;
         list-style-type: none;
         padding: 0;
@@ -560,7 +557,9 @@
         .button-Marketing:active {
             transform: scale(0.9);
         }
-        .raw {
+        .raw1,
+        .raw2,
+        .raw3 {
             display: flex;
             width: 1128px;
             height: 428px;
@@ -575,7 +574,10 @@
             width: 360px;
             height: 56px;
         } 
-        .project-card {
+        .project-card1,
+        .project-card2,
+        .project-card3
+         {
         position: relative;    
         border: 1px solid var(--cloud);
         width: 360px;
@@ -585,10 +587,14 @@
         transition: box-shadow 0.3s;
         overflow: hidden;
         }
-        .project-card:hover {
+        .project-card1,
+        .project-card2,
+        .project-card3:hover {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
-        .project-card:hover .overlay {
+        .project-card1,
+        .project-card2,
+        .project-card3:hover .overlay {
             transform: translateY(0);
         }
         .overlay {
