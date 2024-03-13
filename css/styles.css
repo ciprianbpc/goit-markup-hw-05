@@ -17,7 +17,7 @@
     --font-family: "Roboto", sans-serif;
     --second-family: "Raleway", sans-serif;
 }
-*,
+
 *::before,
 *::after {
     box-sizing: border-box;
@@ -33,7 +33,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 1440px;
-    height: 3200px; 
+    height: 3400px; 
 }
 .text-logo {
     font-family: var(--second-family);
@@ -75,15 +75,36 @@
 .nav-menu ul {
     list-style-type: none;
     padding: 0;
+    display: inline-block;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
 }
 .nav-menu li {
     display: inline-block;
     margin-right: 20px;
+    display: inline-block;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
 }
 .nav-menu a {
     position: relative;
     text-decoration: none;
     color: #333;
+    display: inline-block;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
 }
 .nav-menu a::after {
     content: '';
@@ -119,6 +140,14 @@
     color: var(--slate);
     text-decoration: none;
 }
+.info:hover {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--ocean);
+}
 .tel {
     font-family: var(--font-family);
     font-weight: 400;
@@ -127,6 +156,14 @@
     letter-spacing: 0.02em;
     color: var(--slate);
     text-decoration: none;
+}
+.tel:hover {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--ocean);
 }
 .hero {
     width: 1440px;
@@ -188,18 +225,17 @@
 }
 .popover {
     z-index: 1;
-    opacity: 0.8;
+    opacity: 1;
     position: fixed;
     top: 0;
     left: 0;
     width: 1440px;
-    height: 756px;
+    height: 677px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--navy-blue-modal);
     transition: transform 0.3s;
-
 }
 .modal {
     z-index: 2;
@@ -207,11 +243,12 @@
     padding: 16px;
     border-radius: 4px;
     width: 408px;
-    height: 672px;
+    height: 584px;
     position: relative;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
-    background-color: var(--dairy);
+    background-color: var(--white);
     
+   
 }
 .close-btn {
     width: 24px;
@@ -219,29 +256,29 @@
     border-radius: 100%;
     fill: var(--cornflower);
     stroke-width: 1px;
-    stroke: rgba(0, 0, 0, 0.1);
+    stroke: rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 24px;
     right: 24px; 
     justify-content: center;
+   
 }
 .close-btn svg { 
+    
     height: 24px; 
     width: 24px;
-    fill: var(--navy-blue);
+    fill: black;
 }
 .close-btn:hover {
     cursor: pointer;
-    color: fff;
+    
     transition: transform 250ms cubic-bezier(.04, 0, .02, 1);
 }
 .section1 {
     width: 1128px;
     display: flex;
     justify-content: space-between;
-    padding-top: 94px;
- 
-    
+    padding-top: 94px;    
 }
 .fig {
     border-radius: 4px;
@@ -270,13 +307,13 @@
 }
 .section2 {
     width: 1128px;
-    height: 600px;
+    height: 412px;
     text-align: center;
     justify-content: space-evenly;
     align-items: center;
     margin: 0;
     padding-top: 94px;
-  
+    padding-bottom: 94px; 
 }
 .h2 {
     font-family: var(--font-family);
@@ -288,18 +325,20 @@
     text-align: center;
     color: var(--navy-blue);
 }
-
 .rectangle {
     display: flex;
     justify-content: space-around;
+}
+.rectangle:hover {
+    cursor: pointer;
+    transition: transform 250ms cubic-bezier(.04, 0, .02, 1);
 }
 .section-team {
     width: 1440px;
     height: 780px;
     text-align: center;
     background: var(--cloud);
-    padding-top: 94px;
-   
+    padding-top: 94px;   
 }
 .cards {
     display: flex;
@@ -312,6 +351,8 @@
     height: 428px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08);
     background: var(--white);
+    cursor: pointer;
+    transition: transform 250ms cubic-bezier(.04, 0, .02, 1);
 }
 .icons-list {
     display: flex;
@@ -347,8 +388,7 @@
     width: 1128px;
     height: 200px; 
     align-items: center;
-    padding-top: 94px;
-  
+    padding-top: 94px;  
 }
 .customer-logo {
     width: 1128px;
@@ -377,10 +417,7 @@
     color: #fff;
     justify-content: space-evenly; 
     align-items: center;
- 
-
-    margin: 200px 0px 0px 0px;
-   
+    margin: 200px 0px 0px 0px;  
 }
 .footer-text {
     width: 264px;
@@ -427,6 +464,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        padding-top: 94px;
     }
     .button-list {
         padding-top: 94px;
@@ -558,54 +596,46 @@
             justify-content: space-around;
             padding-top: 94px;
             padding-bottom: 94px;
-        }
-        
-        .content-card {
-            padding: 0px 16px;
-            width: 360px;
-            height: 56px;
             overflow: hidden;
-        } 
+        }
         .project-card1 {
             position: relative;
-             border: 1px solid var(--cloud);
-             width: 360px;
-             height: 420px;
-            box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-            background: var(--white);
-            transition: box-shadow 0.3s;
+            border: 1px solid var(--cloud);
+            width: 360px;
+            height: 420px; 
+            background: var(--white); 
             overflow: hidden;
         }
-       
         .project-card2 {
             position: relative;
             border: 1px solid var(--cloud);
             width: 360px;
-            height: 420px;
-            box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-            background: var(--white);
-            transition: box-shadow 0.3s;
+            height: 420px;    
+            background: var(--white);  
             overflow: hidden;
         }
-        
         .project-card3 {
         position: relative;    
         border: 1px solid var(--cloud);
         width: 360px;
         height: 420px;
-        box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
         background: var(--white);
-        transition: box-shadow 0.3s;
         overflow: hidden;
         }
         .project-card1:hover {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+            background: var(--white);
         }
         .project-card2:hover {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+            background: var(--white);
         }
         .project-card3:hover {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+            background: var(--white);
         }
         .project-card1:hover .overlay {
              transform: translateY(0);
@@ -616,6 +646,14 @@
         .project-card3:hover .overlay {
             transform: translateY(0);
         }
+        .pics {
+            position: relative;
+                width: 360px;
+                height: 300px;
+                margin: 0 auto;
+                background-color: #bdbdbd;
+                overflow: hidden;
+        }
         .overlay {
             position: absolute;
             top: 0;
@@ -623,7 +661,7 @@
             width: 100%;
             height: 300px;
             background-color: var(--iris);
-            transform: translateY(-100%);
+            transform: translateY(100%);
             transition: transform 250ms cubic-bezier(.04, 0, .02, 1);    
         }
         .overlay p {
@@ -634,8 +672,6 @@
             line-height: 150%;
             letter-spacing: 0.02em;
             color: var(--cloud);
-            transform: translateY(100%);
-            transition: transform cubic-bezier(.04, 0, .02, 1);
         }
         
          
