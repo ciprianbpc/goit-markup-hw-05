@@ -130,15 +130,7 @@
 }
 .hero {
     width: 1440px;
-    height: 600px;
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-    ),
-    url(../img/people-office1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    height: 600px;   
     flex-direction: column;
     align-items: center;
     display: flex;
@@ -147,8 +139,15 @@
     text-align: center;
     justify-content: center;
     color: #fff;
-    padding-top: 94px;
     position: relative;
+}
+.hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../img/people-office1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .main.hero.h1.content {
     font-family: var(--font-family);
@@ -241,7 +240,7 @@
     display: flex;
     justify-content: space-between;
     padding-top: 94px;
-    padding-bottom: 94px;
+ 
     
 }
 .fig {
@@ -271,12 +270,13 @@
 }
 .section2 {
     width: 1128px;
-    height: 412px;
-    padding-bottom: 94px;
+    height: 600px;
     text-align: center;
     justify-content: space-evenly;
     align-items: center;
-    margin: 0
+    margin: 0;
+    padding-top: 94px;
+  
 }
 .h2 {
     font-family: var(--font-family);
@@ -299,7 +299,7 @@
     text-align: center;
     background: var(--cloud);
     padding-top: 94px;
-    padding-bottom: 94px;
+   
 }
 .cards {
     display: flex;
@@ -346,18 +346,9 @@
 .section4 {
     width: 1128px;
     height: 200px; 
+    align-items: center;
     padding-top: 94px;
-    padding-bottom: 94px;
-}
-.customers {
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 111%;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    text-align: center;
-    color: var(--navy-blue);    
+  
 }
 .customer-logo {
     width: 1128px;
@@ -386,8 +377,8 @@
     color: #fff;
     justify-content: space-evenly; 
     align-items: center;
-    padding-top: 94px;
-    padding-bottom: 94px;
+ 
+
     margin: 200px 0px 0px 0px;
    
 }
@@ -573,11 +564,31 @@
             padding: 0px 16px;
             width: 360px;
             height: 56px;
+            overflow: hidden;
         } 
-        .project-card1,
-        .project-card2,
-        .project-card3
-         {
+        .project-card1 {
+            position: relative;
+             border: 1px solid var(--cloud);
+             width: 360px;
+             height: 420px;
+            box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+            background: var(--white);
+            transition: box-shadow 0.3s;
+            overflow: hidden;
+        }
+       
+        .project-card2 {
+            position: relative;
+            border: 1px solid var(--cloud);
+            width: 360px;
+            height: 420px;
+            box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+            background: var(--white);
+            transition: box-shadow 0.3s;
+            overflow: hidden;
+        }
+        
+        .project-card3 {
         position: relative;    
         border: 1px solid var(--cloud);
         width: 360px;
@@ -587,13 +598,21 @@
         transition: box-shadow 0.3s;
         overflow: hidden;
         }
-        .project-card1,
-        .project-card2,
+        .project-card1:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .project-card2:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
         .project-card3:hover {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
-        .project-card1,
-        .project-card2,
+        .project-card1:hover .overlay {
+             transform: translateY(0);
+        }
+        .project-card2:hover .overlay {
+            transform: translateY(0);
+        }
         .project-card3:hover .overlay {
             transform: translateY(0);
         }
@@ -602,9 +621,9 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 420px;
+            height: 300px;
             background-color: var(--iris);
-            transform: translateY(100%);
+            transform: translateY(-100%);
             transition: transform 250ms cubic-bezier(.04, 0, .02, 1);    
         }
         .overlay p {
